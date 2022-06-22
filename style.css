@@ -1,0 +1,89 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #ffffff;
+  /* --hue: 50; */
+  /* --bg-primary-light: hsla(var(--hue), 100%, 63%, 0.13);
+  --primary-color: hsl(var(--hue), 100%, 63%); */
+  --tx-color: #323238;
+  --bg-color-button: #e1e1e6;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--tx-color);
+  font-family: 'Roboto', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  display: flex;
+  gap: 100px;
+  align-content: center;
+  align-items: center;
+}
+
+.timer {
+  display: grid;
+  justify-items: center;
+}
+
+.time {
+  font-size: clamp(10rem, 10rem + 10vw, 8.8rem);
+  display: flex;
+  margin-bottom: 1.6rem;
+}
+
+.controls {
+  display: flex;
+  gap: 24px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+/* 
+.play svg path,
+.stop svg path,
+.plus svg path,
+.minus svg path {
+  fill: var(--tx-color);
+} */
+
+button svg {
+  width: 44px;
+  height: 56px;
+}
+.sounds {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 21px;
+}
+
+.sounds button {
+  background-color: var(--bg-color-button);
+  border-radius: 16px;
+  padding: 24px;
+  justify-content: center;
+  align-items: center;
+}
+
+.active path {
+  fill: var(--bg-color);
+}
+
+.sounds .active {
+  background-color: #02799d;
+}
